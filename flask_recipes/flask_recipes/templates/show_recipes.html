@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+    {% if session.logged_in %}
+        <form action="{{ url_for('add_recipe') }}" method=post class=add-recipe>
+        <dl>
+            <dt>Recipe Name:
+            <dd><input type=text size=30 name=recipe_name>
+            <dt>Recipe Description:
+            <dd><textarea name=recipe_description rows=5 cols=40></textarea>
+            <dd><input type=submit value=Post Recipe>
+        </dl>
+        </form>
+        <ul class=recipes>
+        {% for recipe in recipes %}
+            <li><h2>{{ recipe.recipe_name }}</h2>{{ recipe.recipe_description|safe }}
+        {% else %}
+            <li><em>Unbelievable.  No entries here so far</em>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <h3>Welcome! Please Log In To View Recipes!<h3>
+    {% endif %}
+{% endblock %}

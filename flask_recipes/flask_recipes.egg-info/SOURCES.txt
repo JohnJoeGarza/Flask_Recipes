@@ -1,0 +1,8 @@
+MANIFEST.in
+flask_recipes/__init__.py
+flask_recipes/flask_recipes.py
+flask_recipes.egg-info/PKG-INFO
+flask_recipes.egg-info/SOURCES.txt
+flask_recipes.egg-info/dependency_links.txt
+flask_recipes.egg-info/requires.txt
+flask_recipes.egg-info/top_level.txt

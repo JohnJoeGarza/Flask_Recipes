@@ -1,0 +1,3 @@
+graft flask_recipes/templates
+graft flask_recipes/static
+include flask_recipes/recipe_db_schemas.sql
